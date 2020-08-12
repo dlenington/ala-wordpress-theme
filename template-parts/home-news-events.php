@@ -6,7 +6,7 @@ $settings = array(
 );
 	$newsFirstRow = education_hub_get_home_news_block_content(null);
 	$eventsFirstRow = education_hub_get_home_events_block_content(null);
-	$newsSecondRow = education_hub_get_home_news_block_content($settings);
+	$newsSecondRow = education_hub_get_home_news_block_content_row2($settings);
 ?>
 <?php if ( $newsFirstRow || $eventsFirstRow ) : ?>
 	<div id="featured-news-events">

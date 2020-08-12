@@ -2405,6 +2405,11 @@ a.links-btn::before {
     padding: 0 15px;
     width: 60%;
 }
+.recent-news-second-row {
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+}
 
 .recent-events {
     float: left;
