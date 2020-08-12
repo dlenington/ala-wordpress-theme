@@ -1,0 +1,934 @@
+/*
+Theme Name: Education Hub
+
+Adding support for languages written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+https://codex.wordpress.org/Right-to-Left_Language_Support
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+# Content
+    ## Posts and pages
+    ## Comments
+# Custom by WEN Themes
+
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+body {
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: auto;
+    margin-left: 0.4375em;
+}
+
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+blockquote {
+    border-right: 4px solid #ffab1f;
+    border-left: none;
+    margin-right: 0;
+    padding-right: 20px;
+}
+
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+ul,
+ol {
+    margin: 0 25px 15px 0;
+}
+
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+    padding: 6px 9px 6px 0;
+}
+
+textarea {
+    padding-left: 0;
+    padding-right: 3px;
+}
+
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+#main-nav {
+    float: right;
+}
+
+.main-navigation li {
+    float: right;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+    right: 0;
+    left:  auto;
+}
+
+.main-navigation ul ul {
+    right: -999em;
+    left: auto;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+    left: auto;
+    right: 100%;
+}
+
+.main-navigation ul li a {
+    border-left: 1px solid #fff;
+    border-right: none;
+}
+
+.main-navigation ul li:first-child > a {
+    border-right: 1px solid #fff;
+}
+
+.main-navigation ul li li:first-child a {
+    border-right: none;
+}
+
+.main-navigation ul ul a {
+    text-align: right;
+    border-left: none;
+}
+
+.main-navigation ul li.menu-item-has-children > a::after,
+.main-navigation ul li.page_item_has_children > a::after {
+    margin-left: 0;
+    margin-right: 10px;
+    left: 10px;
+    right: auto;
+}
+
+.main-navigation ul li li.menu-item-has-children > a::after,
+.main-navigation ul li li.page_item_has_children > a::after {
+    content: "\f104";
+}
+
+.main-navigation ul li.menu-item-has-children a,
+.main-navigation ul li.page_item_has_children a {
+    padding-left: 30px;
+    padding-right: 15px;
+}
+
+.enabled-sticky-primary-menu #main-nav.fixed {
+    right: 0;
+    left: auto;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+    float: right;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+    float: left;
+    text-align: left;
+}
+
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.single .entry-content{
+    text-align: right;
+}
+
+.entry-meta > span:before,
+.entry-footer > span:before,
+.single-post-meta > span:before,
+.block-meta a:before {
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+.entry-meta .byline .author {
+    margin-right: -4px;
+    margin-left: 0;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+#respond {
+    float: right;
+}
+
+.comments-area form#commentform .comment-form-url,
+.comments-area form#commentform .comment-form-author,
+.comments-area form#commentform .comment-form-email {
+    float: right;
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+    float: right;
+}
+
+.comment-list li {
+    padding-right: 0;
+}
+
+.comment {
+    float: right;
+}
+
+ol.comment-list {
+    float: right;
+}
+
+ol.comment-list .children {
+    float: right;
+    margin: 15px 15px 15px 0;
+}
+
+.comment .comment-body {
+    float: right;
+    text-align: right;
+}
+
+.comment-list .children {
+    border-right: 1px solid rgb(238, 238, 238);
+    margin-right: 0;
+    padding-right: 40px;
+}
+
+.comment-list li.comment > div img.avatar {
+    right: 29px;
+    left: auto;
+}
+
+.vcard .avatar {
+    float: right;
+    margin: 10px 0 15px 15px;
+}
+
+#commentform input[type="checkbox"],
+#commentform input[type="radio"] {
+    margin-left: 10px;
+}
+
+
+/*--------------------------------------------------------------
+# Custom By WEN Themes
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Custom Basic Header Style By WEN Themes
+--------------------------------------------------------------*/
+.site-logo-link,
+.custom-logo-link {
+    float: right;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+#site-identity {
+    float: right;
+}
+
+.site-content {
+    float: right;
+}
+
+#quick-contact {
+    float: right;
+}
+
+#quick-contact li {
+    border-right: 1px solid #fff;
+    border-left: none;
+    float: right;
+    margin-right: 15px;
+    margin-left: 0;
+    padding-right: 15px;
+    padding-left: 0;
+}
+
+#quick-contact li::before {
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+#quick-contact li.quick-call::before {
+    -ms-transform: rotate(245deg); /* IE 9 */
+    -webkit-transform: rotate(245deg); /* Safari prior 9.0 */
+    transform: rotate(245deg); /* Standard syntax */
+}
+
+.top-news-title::before {
+    content: "\f0a5";
+    float: right;
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+#notice-ticker,
+.top-news > p {
+    float: right;
+    margin-right: 15px;
+    margin-left: 0;
+}
+
+.top-news.border-left {
+    border-right: 1px solid #fff;
+    margin-right: 15px;
+    padding-right: 15px;
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+}
+
+.top-news-title {
+    float: right;
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+#quick-contact > ul {
+    float: right;
+}
+
+a.links-btn {
+    float: left;
+    padding: 4px 10px 4px 41px;
+}
+
+a.links-btn::after {
+    left: 0;
+    right: auto;
+}
+
+a.links-btn::before {
+    left: 6px;
+    right: auto;
+}
+
+.quick-links > ul {
+    left: auto;
+    right: -999em;
+}
+
+.quick-links:hover ul,
+.quick-links.focus ul {
+    left: 0;
+    right: auto;
+}
+
+.quick-links {
+    float: left;
+}
+
+.quick-links  a.links-btn {
+    float: left;
+    padding: 4px 10px 4px 41px;
+}
+
+.quick-links a.links-btn::after {
+    left: 0;
+    right: auto;
+}
+
+.quick-links a.links-btn::before {
+    left: 6px;
+    right: auto;
+}
+
+.header-social-wrapper {
+    float: left;
+}
+
+.header-social-wrapper .education_hub_widget_social {
+    float: left;
+    margin: 0 0 0 2px;
+}
+
+.header-social-wrapper .education_hub_widget_social li a {
+    margin-left: 0;
+}
+
+.education_hub_widget_social li a {
+    margin-left: 0;
+}
+
+.education_hub_widget_social li {
+    float: right;
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+#main-slider .cycle-caption {
+    border-radius: 152px 0 0;
+    border-left: 8px solid #f4a024;
+    border-right: none;
+    left: auto;
+    right: 7.5%;
+    padding: 18px 25px 18px 45px;
+    text-align: right;
+}
+
+.search-section {
+    float: left;
+}
+
+.search-form input.search-field,
+.woocommerce-product-search .search-field {
+    padding: 10px 5% 10px 25%;
+}
+
+.search-form .search-submit,
+.woocommerce-product-search button {
+    border-radius: 20px 0 0 20px;
+    float: left;
+    right: auto;
+    left: 0;
+}
+
+#primary {
+    float: right;
+}
+
+#sidebar-primary .widget-title::after ,
+#sidebar-secondary .widget-title::after{
+    right: 5%;
+    left: auto;
+}
+
+#sidebar-primary .widget-title,
+#sidebar-secondary .widget-title{
+    border-right: 5px solid #ffab1f;
+    border-left: none;
+}
+
+.widget-area ul li::before {
+    content: "\f100";
+    right: 0;
+    left: auto;
+    margin-right: 5px;
+    margin-left: 8px;
+}
+
+.widget-area .widget {
+    float: right;
+}
+
+.widget-area ul ul ul ul ul > li {
+    padding-right: 0;
+}
+
+.widget-area ul ul ul ul ul > li:before {
+    right: -20px;
+    left: auto;
+}
+
+#sidebar-primary {
+    float: left;
+}
+
+#sidebar-secondary {
+    float: left;
+}
+
+.widget-area ul {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.widget-area ul li {
+    padding: 2px 25px 2px 0;
+}
+
+.recent-news {
+    float: right;
+}
+
+.recent-events {
+    float: right;
+}
+
+.news-post {
+    float: right;
+}
+
+#featured-content article {
+    float: right;
+}
+
+#featured-content {
+    float: right;
+}
+
+#featured-news-events h2::before {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.event-post .entry-meta {
+    border-radius: 8px 5px 5px 8px;
+    float: right;
+    margin: 10px 0 10px 20px;
+}
+
+.event-post .entry-meta::before {
+    right: 24px;
+    left: auto;
+}
+
+.event-post .entry-meta::after {
+    right: 0;
+    left: auto;
+}
+
+a.button::after {
+    content: none;
+    margin: 0;
+}
+
+a.button::before {
+    content: "\f100";
+    font-family: FontAwesome;
+    margin-right: 5px;
+}
+
+.education_hub_widget_teams .team-item {
+    float: right;
+}
+
+.education_hub_widget_teams .team-thumb {
+    float: right;
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.education_hub_widget_testimonial_slider .cycle-slide img {
+    float: left;
+    margin: 0 25px 20px 0;
+}
+
+.education_hub_widget_testimonial_slider .cycle-slide h4 {
+    float: left;
+}
+
+.education_hub_widget_testimonial_slider .cycle-slide p {
+    text-align: left;
+}
+
+.education_hub_widget_testimonial_slider .cycle-prev {
+    right: 20px;
+    left: auto;
+}
+
+.education_hub_widget_testimonial_slider  .cycle-next {
+    right: auto;
+    left: 20px;
+}
+
+#footer-widgets .education_hub_widget_testimonial_slider .cycle-prev,
+#sidebar-primary .education_hub_widget_testimonial_slider .cycle-prev,
+#sidebar-secondary .education_hub_widget_testimonial_slider .cycle-prev {
+    right: 5px;
+    left: auto;
+}
+
+#footer-widgets .education_hub_widget_testimonial_slider .cycle-next,
+#sidebar-primary .education_hub_widget_testimonial_slider .cycle-next,
+#sidebar-secondary .education_hub_widget_testimonial_slider .cycle-next {
+    right: auto;
+    left: 5px;
+}
+
+#footer-widgets {
+    float: right;
+}
+
+.footer-widget-area  ul li {
+    padding-right: 20px;
+}
+
+.footer-widget-area ul li::before {
+    right: 0;
+    left: auto;
+    margin-left: 8px;
+    margin-right: 5px;
+}
+
+.footer-widget-area {
+    border-right: 1px dashed #939393;
+    border-left: none;
+    float: right;
+}
+
+#footer-navigation li a,
+#quick-links-404 ul li a {
+    border-right: 1px solid #dddddd;
+    border-left: none;
+}
+
+.global-layout-left-sidebar #primary,
+.global-layout-three-columns-psc #primary {
+    float: left;
+}
+
+.global-layout-three-columns-psc #sidebar-primary {
+    float: right;
+}
+
+.global-layout-three-columns-pcs #sidebar-primary ,
+.global-layout-three-columns-cps #primary ,
+.global-layout-three-columns-cps #sidebar-primary,
+.global-layout-three-columns-cps #sidebar-secondary,
+.global-layout-three-columns #sidebar-secondary,
+.global-layout-three-columns-pcs-equal #sidebar-primary,
+.global-layout-three-columns-scp-equal #sidebar-secondary {
+    float: right;
+}
+
+.global-layout-three-columns #sidebar-primary {
+    float: left;
+}
+
+.scrollup {
+    float: left;
+    right: auto;
+    left: 32px;
+}
+
+.entry-footer > span,
+.entry-meta > span {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+    float: right;
+}
+
+.woocommerce ul.products li.product .onsale:after,
+.woocommerce-page ul.products li.product .onsale:after {
+    border-left: 4px solid #666;
+    right: auto;
+    left: 2px;
+}
+
+.woocommerce ul.products li.product .onsale,
+.woocommerce-page ul.products li.product .onsale,
+.woocommerce span.onsale {
+    right: auto;
+    left: -6px;
+}
+
+.cart button.single_add_to_cart_button {
+    margin-right: 15px;
+}
+
+.authorbox .author-avatar{
+    float: right;
+}
+
+.authorbox .author-info ,
+.authorbox .author-bio-posts-content {
+    margin-right: 75px;
+}
+
+.authorbox.no-author-avatar .author-info,
+.authorbox.no-author-avatar .author-bio-posts-content {
+    margin-right: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+/* Smaller than standard 1139 (devices and browsers) */
+@media only screen and (max-width:1169px) {
+    .education_hub_widget_teams .team-thumb {
+        margin-left: 0;
+    }
+}
+
+/* Smaller than standard 1024 (devices and browsers) */
+@media only screen and (max-width:1023px) {
+    #main-slider .cycle-caption {
+        right: 8.5%;
+        left: auto;
+    }
+
+    #quick-contact {
+        float: right;
+    }
+
+    .header-social-wrapper {
+        float: right;
+    }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width:767px) {
+    #quick-contact li {
+        display: inline-block;
+        float: none;
+    }
+
+    .top-news.border-left {
+        border-right: none;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    #site-identity {
+        float: none;
+    }
+
+    .header-social-wrapper {
+        float: right;
+    }
+
+    .header-social-wrapper .education_hub_widget_social {
+        margin: 0 0 0 2px;
+    }
+
+    .search-section {
+        float: left;
+    }
+
+    #main-slider .cycle-caption {
+        right: 12.5%;
+        left: auto;
+    }
+
+    .recent-news,
+    .recent-events {
+        float: right;
+    }
+
+    .news-post {
+        float: right;
+    }
+
+    .main-navigation li {
+        display: block;
+        float: inherit;
+        margin-bottom: 0;
+        position: relative;
+        clear: both;
+    }
+
+    .main-navigation ul li a {
+        padding: 10px 13px;
+    }
+
+    .main-navigation ul li:first-child > a {
+        border-right: none;
+    }
+
+    .main-navigation ul li.menu-item-has-children a,
+    .main-navigation ul li.page_item_has_children a {
+        padding-left: 43px;
+    }
+
+    .main-navigation ul li.menu-item-has-children ul a,
+    .main-navigation ul li.page_item_has_children ul a {
+        padding-right: 30px;
+        padding-left: 15px;
+    }
+
+    .main-navigation ul li.menu-item-has-children li.menu-item-has-children a,
+    .main-navigation ul li.page_item_has_children li.menu-item-has-children a {
+        padding-left: 43px;
+    }
+
+    .main-navigation ul li.menu-item-has-children li.menu-item-has-children ul a,
+    .main-navigation ul li.page_item_has_children li.menu-item-has-children ul a {
+        padding-right: 40px;
+        padding-left: 15px;
+    }
+
+    .main-navigation ul li.menu-item-has-children li.menu-item-has-children li.menu-item-has-children a,
+    .main-navigation ul li.page_item_has_children li.menu-item-has-children li.menu-item-has-children a {
+        padding-left: 43px;
+    }
+
+    .main-navigation ul li.menu-item-has-children li.menu-item-has-children li.menu-item-has-children ul a,
+    .main-navigation ul li.page_item_has_children li.menu-item-has-children li.menu-item-has-children ul a {
+        padding-right: 60px;
+        padding-left: 15px;
+    }
+
+    .main-navigation ul ul,
+    .main-navigation ul ul ul {
+        float: right;
+        right: 0;
+        left: auto;
+    }
+
+    .main-navigation ul.sub-menu.toggled-on {
+        right: auto;
+    }
+
+    .wrap-menu-content {
+        right: 3.5%;
+        left: auto;
+    }
+
+    .menu-toggle {
+        padding: 5px 15px 5px 20px;
+    }
+
+    .menu-toggle i {
+        border-left: 1px solid #dddddd;
+        border-right: none;
+        float: right;
+        margin-left: 10px;
+        margin-right: 0;
+        padding-left: 15px;
+        padding-right: 0;
+    }
+
+    .dropdown-toggle {
+        right: auto;
+        left: 0;
+    }
+
+    .dropdown-toggle:after {
+        right: 1px;
+        left: auto;
+    }
+
+    .footer-widget-area {
+        float: right;
+    }
+
+    #commentform input[type="checkbox"],
+    #commentform input[type="radio"] {
+        margin-left: 10px;
+        margin-right: 0;
+    }
+
+    #respond {
+        float: right;
+    }
+
+    .quick-links {
+        float: right;
+    }
+
+    .top-news {
+        text-align: right;
+    }
+
+    .top-news-title {
+        float: right;
+        margin-left: 10px;
+        margin-right: 0;
+    }
+
+    #notice-ticker,
+    .top-news > p {
+        margin-left: 0;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width:479px) {
+    .education_hub_widget_testimonial_slider .cycle-prev {
+        left: auto;
+        right: 0;
+    }
+
+    .education_hub_widget_testimonial_slider .cycle-next {
+        right: auto;
+        left: 0;
+    }
+
+    #main-slider .cycle-caption {
+        left: auto;
+        right: 13%;
+    }
+
+    #main-slider .cycle-prev::after {
+        padding: 15px 3px 15px 15px;
+    }
+
+    #main-slider .cycle-next::after {
+        padding: 15px 15px 15px 5px;
+    }
+
+    #main-slider .cycle-prev:hover,
+    #main-slider .cycle-prev {
+        left: auto;
+        right: -1px;
+    }
+
+    #main-slider .cycle-next:hover,
+    #main-slider .cycle-next {
+        right: auto;
+        left: 0;
+    }
+
+    #main-slider .cycle-prev::after {
+        padding: 10px 12px 10px 15px;
+    }
+
+    #main-slider .cycle-next::after {
+        padding: 10px 15px 10px 10px;
+    }
+}
+
+/*** Block Styles ***/
+[class^="wp-block-"]:not(.wp-block-gallery) figcaption {
+    text-align: right;
+}
+
+.wp-block-quote:not(.is-large):not(.is-style-large),
+blockquote {
+    border-left: none;
+    border-right: 4px solid #ffab1f;
+}
+
+.entry-content ul.wp-block-gallery {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.entry-content ul,
+.entry-content ol {
+    padding-right: 20px;
+    padding-left: 0;
+    margin-right: 0;
+}
