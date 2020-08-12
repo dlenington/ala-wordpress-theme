@@ -24,6 +24,10 @@ if ( ! function_exists( 'education_hub_get_option' ) ) :
 
 		$default = ( isset( $education_hub_default_options[ $key ] ) ) ? $education_hub_default_options[ $key ] : '';
 		$theme_options = get_theme_mod( 'theme_options', $education_hub_default_options );
+		echo '<pre>';
+		var_dump($theme_options);
+		echo '</pre>';
+		die();
 		$theme_options = array_merge( $education_hub_default_options, $theme_options );
 		$value = '';
 		if ( isset( $theme_options[ $key ] ) ) {
