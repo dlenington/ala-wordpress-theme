@@ -6,7 +6,7 @@
  */
 
 // Add featured content to the theme.
-add_action( 'education_hub_action_before_content', 'education_hub_add_featured_content', 6 );
+// add_action( 'education_hub_action_before_content', 'education_hub_add_featured_content', 6 );
 
 // Featured content details.
 add_filter( 'education_hub_filter_featured_content_details', 'education_hub_get_featured_content_details' );
@@ -122,25 +122,6 @@ if ( ! function_exists( 'education_hub_render_featured_content' ) ) :
 			return;
 		}
 		?>
-		<div id="featured-content">
-			<div class="container">
-				<div class="inner-wrapper featured-content-column-<?php echo absint( count( $content_details ) ); ?>">
-				<?php foreach ($content_details as $content ): ?>
-					<article>
-						<header class="entry-header"><h2 class="entry-title"><a href="<?php echo esc_url( $content['url'] ); ?>"><?php echo esc_attr( $content['title'] ); ?></a></h2></header>
-						<?php if ( ! empty( $content['images'] ) ): ?>
-							<a href="<?php echo esc_url( $content['url'] ); ?>"><img src="<?php echo esc_url( $content['images'][0]); ?>" alt="<?php echo esc_attr( $content['title'] ); ?>" width="<?php echo esc_attr( $content['images'][1]); ?>" height="<?php echo esc_attr( $content['images'][2]); ?>" /></a>
-						<?php endif; ?>
-						<div class="entry-content">
-							<div>
-								<?php echo wp_kses_post( wpautop( $content['excerpt'] ) ); ?>
-							</div>
-						</div>
-					</article>
-				<?php endforeach; ?>
-				</div>
-			</div>
-		</div>
 		<div id="featured-content">
 			<div class="container">
 				<div class="inner-wrapper featured-content-column-<?php echo absint( count( $content_details ) ); ?>">
