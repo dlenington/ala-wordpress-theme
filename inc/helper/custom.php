@@ -29,8 +29,8 @@ if ( ! function_exists( 'education_hub_get_home_news_block_content_row2' ) ) :
 			$home_news_number         = education_hub_get_option( 'home_news_number' );
 		}
 		else {
-			$home_news_category = 12;
-			$home_news_section_title = "Announcements";
+			$home_news_category = 54;
+			$home_news_section_title = "Recent JALA Articles";
 			$home_news_number = 4;
 		}
 			$home_news_excerpt_length = education_hub_get_option( 'home_news_excerpt_length' );
@@ -64,7 +64,7 @@ if ( ! function_exists( 'education_hub_get_home_news_block_content_row2' ) ) :
 				  	<?php if (has_post_thumbnail() ): ?>
 				  		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'education-hub-thumb', array( 'class' => 'aligncenter' ) ); ?></a>
 				  	<?php endif ?>
-				  	<div class="news-content2">
+				  	<div class="news-content">
 				  		<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				  		<div class="block-meta">
 		  					<?php
@@ -135,8 +135,8 @@ if ( ! function_exists( 'education_hub_get_home_news_block_content' ) ) :
 			$home_news_number         = education_hub_get_option( 'home_news_number' );
 		}
 		else {
-			$home_news_category = 12;
-			$home_news_section_title = "Announcements";
+			$home_news_category = 54;
+			$home_news_section_title = "Recent JALA Articles";
 			$home_news_number = 4;
 		}
 			$home_news_excerpt_length = education_hub_get_option( 'home_news_excerpt_length' );
@@ -170,7 +170,7 @@ if ( ! function_exists( 'education_hub_get_home_news_block_content' ) ) :
 				  	<?php if (has_post_thumbnail() ): ?>
 				  		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'education-hub-thumb', array( 'class' => 'aligncenter' ) ); ?></a>
 				  	<?php endif ?>
-				  	<div class="news-content">
+				  	<div class="news-content2">
 				  		<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				  		<div class="block-meta">
 		  					<?php
