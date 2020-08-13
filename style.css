@@ -2563,6 +2563,12 @@ a.button::after {
     padding: 15px;
 }
 
+.news-content2 {
+    background: #f3f3f3 none repeat scroll 0 0;
+    border-top: 5px solid #42768e;
+    padding: 15px;
+}
+
 .news-post img {
     margin-bottom: 0;
 }

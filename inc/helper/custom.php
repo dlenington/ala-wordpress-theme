@@ -64,7 +64,7 @@ if ( ! function_exists( 'education_hub_get_home_news_block_content_row2' ) ) :
 				  	<?php if (has_post_thumbnail() ): ?>
 				  		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'education-hub-thumb', array( 'class' => 'aligncenter' ) ); ?></a>
 				  	<?php endif ?>
-				  	<div class="news-content">
+				  	<div class="news-content2">
 				  		<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				  		<div class="block-meta">
 		  					<?php
