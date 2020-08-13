@@ -71,6 +71,7 @@
 	  do_action( 'education_hub_action_after_header' );
 	?>
 
+
 	<?php
 	/**
 	 * Hook - education_hub_action_before_content.
@@ -80,9 +81,9 @@
 	 */
 	do_action( 'education_hub_action_before_content' );
 	?>
-    <?php
-	  /**
-	   * Hook - education_hub_action_content.
-	   */
-	  do_action( 'education_hub_action_content' );
-	?>
+	<?php
+  /**
+   * Hook - education_hub_action_content.
+   */
+  do_action( 'education_hub_action_content' );
+?>

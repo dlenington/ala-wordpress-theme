@@ -6,7 +6,8 @@
  */
 
 // Add featured content to the theme.
-add_action( 'education_hub_action_before_content', 'education_hub_add_featured_content', 6 );
+// add_action( 'education_hub_action_before_content', 'education_hub_add_featured_content', 6 );
+add_action( 'education_hub_action_featured_content', 'education_hub_add_featured_content', 6 );
 
 // Featured content details.
 add_filter( 'education_hub_filter_featured_content_details', 'education_hub_get_featured_content_details' );
