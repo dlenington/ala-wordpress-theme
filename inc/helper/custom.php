@@ -5,14 +5,14 @@
  * @package Education_Hub
  */
 
-if ( ! function_exists( 'education_hub_get_home_news_block_content' ) ) :
+if ( ! function_exists( 'education_hub_get_home_news_block_content_row2' ) ) :
 
 	/**
 	 * Render home news block.
 	 *
 	 * @since 1.0.0
 	 */
-	function education_hub_get_home_news_block_content($settings) {
+	function education_hub_get_home_news_block_content_row2($settings) {
 
 		// echo '<pre>';
 		// var_dump($settings);
@@ -31,7 +31,7 @@ if ( ! function_exists( 'education_hub_get_home_news_block_content' ) ) :
 		else {
 			$home_news_category = 12;
 			$home_news_section_title = "Announcements";
-			$home_news_number = 3;
+			$home_news_number = 4;
 		}
 			$home_news_excerpt_length = education_hub_get_option( 'home_news_excerpt_length' );
 			$home_news_read_more_text = education_hub_get_option( 'home_news_read_more_text' );
@@ -53,7 +53,7 @@ if ( ! function_exists( 'education_hub_get_home_news_block_content' ) ) :
 		ob_start();
 	  ?>
 	  <?php if ( ! empty( $all_posts ) ) : ?>
-	  	<div class="recent-news">
+	  	<div class="recent-news-second-row">
 		  	<h2><?php echo esc_html( $home_news_section_title ); ?></h2>
 		  	<?php global $post; ?>
 		  	<div class="inner-wrapper">
@@ -111,14 +111,14 @@ if ( ! function_exists( 'education_hub_get_home_news_block_content' ) ) :
 	}
 
 endif;
-if ( ! function_exists( 'education_hub_get_home_news_block_content_row2' ) ) :
+if ( ! function_exists( 'education_hub_get_home_news_block_content' ) ) :
 
 	/**
 	 * Render home news block.
 	 *
 	 * @since 1.0.0
 	 */
-	function education_hub_get_home_news_block_content_row2($settings) {
+	function education_hub_get_home_news_block_content($settings) {
 
 		// echo '<pre>';
 		// var_dump($settings);
@@ -137,7 +137,7 @@ if ( ! function_exists( 'education_hub_get_home_news_block_content_row2' ) ) :
 		else {
 			$home_news_category = 12;
 			$home_news_section_title = "Announcements";
-			$home_news_number = 3;
+			$home_news_number = 4;
 		}
 			$home_news_excerpt_length = education_hub_get_option( 'home_news_excerpt_length' );
 			$home_news_read_more_text = education_hub_get_option( 'home_news_read_more_text' );
@@ -159,7 +159,7 @@ if ( ! function_exists( 'education_hub_get_home_news_block_content_row2' ) ) :
 		ob_start();
 	  ?>
 	  <?php if ( ! empty( $all_posts ) ) : ?>
-	  	<div class="recent-news-second-row">
+	  	<div class="recent-news">
 		  	<h2><?php echo esc_html( $home_news_section_title ); ?></h2>
 		  	<?php global $post; ?>
 		  	<div class="inner-wrapper">
