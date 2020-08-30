@@ -6,9 +6,9 @@ $settings = array(
 );
 	$newsFirstRow = education_hub_get_home_news_block_content(null);
 	$eventsFirstRow = education_hub_get_home_events_block_content(null);
-	$newsSecondRow = education_hub_get_home_news_block_content_row2($settings);
+	$newsSecondRow = education_hub_get_home_news_block_content_row2();
 ?>
-<?php if ( $newsSecondRow || $eventsFirstRow ) : ?>
+<?php if ( $newsSecondRow ) : ?>
 	<div id="featured-news-events">
 		<div class="container">
 			<div class="inner-wrapper">

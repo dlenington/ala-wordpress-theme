@@ -12,27 +12,17 @@ if ( ! function_exists( 'education_hub_get_home_news_block_content_row2' ) ) :
 	 *
 	 * @since 1.0.0
 	 */
-	function education_hub_get_home_news_block_content_row2($settings) {
-
-		// echo '<pre>';
-		// var_dump($settings);
-		// echo '</pre>';
-		// die();
+	function education_hub_get_home_news_block_content_row2() {
 
 		$home_news_section_status = education_hub_get_option( 'home_news_section_status' );
 		if ( true !== $home_news_section_status ) {
 			return;
 		}
-		if($settings == null ) {
-			$home_news_section_title  = education_hub_get_option( 'home_news_section_title' );
-			$home_news_category       = education_hub_get_option( 'home_news_category' );
-			$home_news_number         = education_hub_get_option( 'home_news_number' );
-		}
-		else {
+	
 			$home_news_category = 54;
 			$home_news_section_title = "Recent JALA Articles";
 			$home_news_number = 4;
-		}
+	
 			$home_news_excerpt_length = education_hub_get_option( 'home_news_excerpt_length' );
 			$home_news_read_more_text = education_hub_get_option( 'home_news_read_more_text' );
 		
@@ -42,6 +32,7 @@ if ( ! function_exists( 'education_hub_get_home_news_block_content_row2' ) ) :
 			'no_found_rows'  => true,
 			'post_type'      => 'post',
 		);
+
 		if ( absint( $home_news_category ) > 0 ) {
 		  $qargs['cat'] = absint( $home_news_category );
 		}
