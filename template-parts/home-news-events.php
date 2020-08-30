@@ -1,19 +1,14 @@
 <?php
-
-$settings = array(
-	'cat' => 12,
-	'title'  => 'Announcements',
-);
-	$newsFirstRow = education_hub_get_home_news_block_content(null);
-	$eventsFirstRow = education_hub_get_home_events_block_content(null);
-	$newsSecondRow = education_hub_get_home_news_block_content_row2();
+	$news = education_hub_get_home_news_block_content();
+	$news2 = education_hub_get_home_news_block_content_2();
+	$events = education_hub_get_home_events_block_content();
+	
 ?>
-<?php if ( $newsSecondRow ) : ?>
+<?php if ( $news || $events ) : ?>
 	<div id="featured-news-events">
 		<div class="container">
 			<div class="inner-wrapper">
-				
-				<?php echo $newsSecondRow; ?>
+				<?php echo $news2; ?>
 			</div> <!-- .inner-wrapper -->
 		</div> <!-- .container -->
 	</div> <!-- #featured-news-events -->
@@ -27,14 +22,13 @@ $settings = array(
 	 */
 	do_action( 'education_hub_action_featured_content' );
 	?>
-<?php if ( $newsFirstRow || $eventsFirstRow ) : ?>
+<?php if ( $news || $events ) : ?>
 	<div id="featured-news-events">
 		<div class="container">
 			<div class="inner-wrapper">
-				<?php echo $newsFirstRow; ?>
-				<?php echo $eventsFirstRow; ?>
+				<?php echo $news; ?>
+				<?php echo $events; ?>
 			</div> <!-- .inner-wrapper -->
 		</div> <!-- .container -->
 	</div> <!-- #featured-news-events -->
 <?php endif ?>
-

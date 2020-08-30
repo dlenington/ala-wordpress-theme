@@ -200,17 +200,12 @@ if ( ! function_exists( 'education_hub_the_custom_logo' ) ) :
 	 * @since 1.7
 	 */
 	function education_hub_the_custom_logo() {
-
-		// if ( function_exists( 'the_custom_logo' ) ) {
-		// 	the_custom_logo();
-		// }
-		// else {
 				?>
-				<a href="https://africanlit.org/wordpress/" class="site-logo-link custom-logo">
+				<a href="https://africanlit.org/" class="site-logo-link custom-logo">
 					<img src="https://africanlit.org/wordpress/wp-content/uploads/2020/08/ALA_Logo_for_New-Website_2-1.jpg" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
 				</a>
 				<?php
-		// }
+
 
 	}
 

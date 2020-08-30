@@ -5,46 +5,39 @@
  * @package Education_Hub
  */
 
-if ( ! function_exists( 'education_hub_get_home_news_block_content_row2' ) ) :
+if ( ! function_exists( 'education_hub_get_home_news_block_content' ) ) :
 
 	/**
 	 * Render home news block.
 	 *
 	 * @since 1.0.0
 	 */
-	function education_hub_get_home_news_block_content_row2() {
+	function education_hub_get_home_news_block_content() {
 
 		$home_news_section_status = education_hub_get_option( 'home_news_section_status' );
 		if ( true !== $home_news_section_status ) {
 			return;
 		}
-	
-			$home_news_category = 54;
-			$home_news_section_title = "Recent JALA Articles";
-			$home_news_number = 4;
-	
-			$home_news_excerpt_length = education_hub_get_option( 'home_news_excerpt_length' );
-			$home_news_read_more_text = education_hub_get_option( 'home_news_read_more_text' );
-		
-	
+		$home_news_section_title  = education_hub_get_option( 'home_news_section_title' );
+		$home_news_category       = education_hub_get_option( 'home_news_category' );
+		$home_news_number         = education_hub_get_option( 'home_news_number' );
+		$home_news_excerpt_length = education_hub_get_option( 'home_news_excerpt_length' );
+		$home_news_read_more_text = education_hub_get_option( 'home_news_read_more_text' );
+
 		$qargs = array(
 			'posts_per_page' => absint( $home_news_number ),
 			'no_found_rows'  => true,
 			'post_type'      => 'post',
 		);
-
 		if ( absint( $home_news_category ) > 0 ) {
 		  $qargs['cat'] = absint( $home_news_category );
 		}
 
 		$all_posts = get_posts( $qargs );
-		
-
-
 		ob_start();
 	  ?>
 	  <?php if ( ! empty( $all_posts ) ) : ?>
-	  	<div class="recent-news-second-row">
+	  	<div class="recent-news">
 		  	<h2><?php echo esc_html( $home_news_section_title ); ?></h2>
 		  	<?php global $post; ?>
 		  	<div class="inner-wrapper">
@@ -55,7 +48,7 @@ if ( ! function_exists( 'education_hub_get_home_news_block_content_row2' ) ) :
 				  	<?php if (has_post_thumbnail() ): ?>
 				  		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'education-hub-thumb', array( 'class' => 'aligncenter' ) ); ?></a>
 				  	<?php endif ?>
-				  	<div class="news-content">
+				  	<div class="news-content2">
 				  		<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				  		<div class="block-meta">
 		  					<?php
@@ -102,38 +95,26 @@ if ( ! function_exists( 'education_hub_get_home_news_block_content_row2' ) ) :
 	}
 
 endif;
-if ( ! function_exists( 'education_hub_get_home_news_block_content' ) ) :
+
+if ( ! function_exists( 'education_hub_get_home_news_block_content_2' ) ) :
 
 	/**
 	 * Render home news block.
 	 *
 	 * @since 1.0.0
 	 */
-	function education_hub_get_home_news_block_content($settings) {
-
-		// echo '<pre>';
-		// var_dump($settings);
-		// echo '</pre>';
-		// die();
+	function education_hub_get_home_news_block_content_2() {
 
 		$home_news_section_status = education_hub_get_option( 'home_news_section_status' );
 		if ( true !== $home_news_section_status ) {
 			return;
 		}
-		if($settings == null ) {
-			$home_news_section_title  = education_hub_get_option( 'home_news_section_title' );
-			$home_news_category       = education_hub_get_option( 'home_news_category' );
-			$home_news_number         = education_hub_get_option( 'home_news_number' );
-		}
-		else {
-			$home_news_category = 54;
-			$home_news_section_title = "Recent JALA Articles";
-			$home_news_number = 4;
-		}
-			$home_news_excerpt_length = education_hub_get_option( 'home_news_excerpt_length' );
-			$home_news_read_more_text = education_hub_get_option( 'home_news_read_more_text' );
-		
-	
+		$home_news_section_title  = "Recent JALA Articles";
+		$home_news_category       = 54;
+		$home_news_number         = 4;
+		$home_news_excerpt_length = education_hub_get_option( 'home_news_excerpt_length' );
+		$home_news_read_more_text = education_hub_get_option( 'home_news_read_more_text' );
+
 		$qargs = array(
 			'posts_per_page' => absint( $home_news_number ),
 			'no_found_rows'  => true,
@@ -144,13 +125,10 @@ if ( ! function_exists( 'education_hub_get_home_news_block_content' ) ) :
 		}
 
 		$all_posts = get_posts( $qargs );
-		
-
-
 		ob_start();
 	  ?>
 	  <?php if ( ! empty( $all_posts ) ) : ?>
-	  	<div class="recent-news">
+	  	<div class="recent-news-second-row">
 		  	<h2><?php echo esc_html( $home_news_section_title ); ?></h2>
 		  	<?php global $post; ?>
 		  	<div class="inner-wrapper">
@@ -161,7 +139,7 @@ if ( ! function_exists( 'education_hub_get_home_news_block_content' ) ) :
 				  	<?php if (has_post_thumbnail() ): ?>
 				  		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'education-hub-thumb', array( 'class' => 'aligncenter' ) ); ?></a>
 				  	<?php endif ?>
-				  	<div class="news-content2">
+				  	<div class="news-content">
 				  		<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				  		<div class="block-meta">
 		  					<?php
