@@ -201,19 +201,16 @@ if ( ! function_exists( 'education_hub_the_custom_logo' ) ) :
 	 */
 	function education_hub_the_custom_logo() {
 
-		if ( function_exists( 'the_custom_logo' ) ) {
-			the_custom_logo();
-		}
-		else {
-			$site_logo = education_hub_get_option( 'site_logo' );
-			if ( ! empty( $site_logo ) ) {
+		// if ( function_exists( 'the_custom_logo' ) ) {
+		// 	the_custom_logo();
+		// }
+		// else {
 				?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo-link">
-					<img src="<?php echo esc_url( $site_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+				<a href="https://africanlit.org/wordpress/" class="site-logo-link custom-logo">
+					<img src="https://africanlit.org/wordpress/wp-content/uploads/2020/08/ALA_Logo_for_New-Website_2-1.jpg" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
 				</a>
 				<?php
-			}
-		}
+		// }
 
 	}
 
