@@ -9,6 +9,10 @@
 
 get_header(); ?>
 
+<?php 
+
+get_sidebar();?>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -30,12 +34,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php
-	/**
-	 * Hook - education_hub_action_sidebar.
-	 *
-	 * @hooked: education_hub_add_sidebar - 10
-	 */
-	do_action( 'education_hub_action_sidebar' );
-?>
+
 <?php get_footer(); ?>

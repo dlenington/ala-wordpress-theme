@@ -13,6 +13,9 @@
  */
 
 get_header(); ?>
+<?php 
+
+get_sidebar();?>
 
 <?php if ( true === apply_filters( 'education_hub_filter_home_page_content', true ) ) : ?>
 
@@ -59,14 +62,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php
-	/**
-	 * Hook - education_hub_action_sidebar.
-	 *
-	 * @hooked: education_hub_add_sidebar - 10
-	 */
-	do_action( 'education_hub_action_sidebar' );
-?>
+
 
 <?php endif; // End if show home content. ?>
 
