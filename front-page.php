@@ -9,8 +9,6 @@
 
 get_header(); ?>
 
-
-
 <?php if ( true === apply_filters( 'education_hub_filter_home_page_content', true ) ) : ?>
 
 	<div id="primary" class="content-area">
